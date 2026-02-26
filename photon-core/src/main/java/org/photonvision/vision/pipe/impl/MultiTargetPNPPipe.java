@@ -99,7 +99,7 @@ public class MultiTargetPNPPipe
         // of tags to the camera, with all other tags supplied in the targetList being
         // left unused.
 
-        var targetArray = (TrackedTarget[]) targetList.toArray();
+        var targetArray = targetList.toArray(new TrackedTarget[targetList.size()]);
         Arrays.sort(
                 targetArray,
                 (a, b) -> {
